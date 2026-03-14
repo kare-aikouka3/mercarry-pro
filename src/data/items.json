@@ -52,119 +52,110 @@
       ]
     },
     {
-      "id": "craft",
-      "title": "工作代行 (Craft Substitution)",
+      "id": "luxury",
+      "title": "高級品リサーチ (Luxury Strategy)",
       "items": [
         {
-          "name": "壁面飾り：卒園・入園",
-          "reason": "3-4月の多忙な保育士・介護職の需要がピーク。",
-          "background": "年度末の事務作業増により、装飾まで手が回らない現場の救い。",
-          "source": "画用紙・文具",
-          "price": "1,500円〜2,500円",
-          "kind_word": "画用紙で一つ一つ丁寧に作成。忙しい先生方の時短にお役立て下さい。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E5%A3%81%E9%9D%A2%E9%A3%BE%E3%82%8A%20%E5%8D%92%E5%9C%92%20%E5%85%A5%E5%9C%92"
+          "name": "LV スピーディ 25 (モノグラム)",
+          "reason": "若年層や海外需要による不動の人気。ヴィンテージも高値安定。",
+          "background": "使い込まれた「味」が評価される定番モデル。",
+          "source": "セカスト/ブックオフ等のブランドコーナー",
+          "price_gap": "店舗 3.5万円 → メルカリ 5.5万円",
+          "kind_word": "時代を超えて愛される名品です。大切にメンテナンスしながら使い継いでいただける方にお譲りしたいです。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3%20%E3%82%B9%E3%83%94%E3%83%BC%E3%83%87%E3%82%A325%20%E3%83%A2%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%A0"
         },
         {
-          "name": "モンテッソーリ 洗濯バサミ遊び",
-          "reason": "家庭での「おうちモンテ」教育の普及。",
-          "background": "指先の知育玩具を自作する時間がない親御さん向け。",
-          "source": "ラミネート・洗濯バサミ",
-          "price": "1,000円〜1,800円",
-          "kind_word": "指先の訓練に最適。可愛い動物の絵柄で楽しく集中して遊べます。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%A2%E3%83%B3%E3%83%86%E3%83%83%E3%82%BD%E3%83%BC%E3%83%AA%20%E6%B4%97%E6%BF%AF%E3%83%90%E3%82%B5%E3%83%9F"
+          "name": "Chanel ヴィンテージブローチ",
+          "reason": "海外の「ヴィンテージシャネル」ブームによる高騰。",
+          "background": "一点物としての希少性が高く、SNSでのコーディネート需要大。",
+          "source": "百貨店催事/質屋",
+          "price_gap": "店舗 4.5万円 → メルカリ 8.0万円",
+          "kind_word": "上品な輝きが美しいヴィンテージ品です。ジャケットやコートのアクセントに特別な一品をいかがでしょうか。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%82%BV%E3%83%A3%E3%83%8D%E3%83%AB%20%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B8%20%E3%83%96%E3%83%AD%E3%83%BC%E3%83%81"
         },
         {
-          "name": "入園準備 レッスンバッグ",
-          "reason": "「手作り指定」があるが、裁縫ができない親御さん。",
-          "background": "ミシンを持っていない家庭も多く、既製品より「手作り感」が重宝。",
-          "source": "キルティング生地等",
-          "price": "2,000円〜4,000円",
-          "kind_word": "図書袋としても使える標準サイズ。内側は丈夫なキルティングです。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%83%90%E3%83%83%E3%82%B0%20%E3%83%8F%E3%83%B3%E3%83%89%E3%83%A1%E3%82%A4%E3%83%89"
+          "name": "Rolex デイトジャスト (ヴィンテージ)",
+          "reason": "資産価値の高さ。旧モデル特有のサイズ感への支持。",
+          "background": "現行品より小ぶりなアンティークモデルの二次流通価格が上昇中。",
+          "source": "時計専門店/ブランドリサイクル",
+          "price_gap": "店舗 45万円 → メルカリ 55万円+",
+          "kind_word": "一生モノとしてお使いいただける名機です。オーバーホール等、丁寧な扱いを心がけていた個体をお譲りします。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20%E3%83%87%E3%82%A4%E3%83%88%E3%82%B8%E3%83%A3%E3%82%B9%E3%83%88%20%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B8"
         },
         {
-          "name": "手作り 知育カード",
-          "reason": "良質な学習教材を安価に揃えたい需要。",
-          "background": "フラッシュカードや絵合わせ。ラミネート加工の手間が価値。",
-          "source": "印刷物・ラミネート",
-          "price": "800円〜1,500円",
-          "kind_word": "角丸加工済みなので、小さなお子様が触れても安心・安全です。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E6%89%8B%EBD%9C%E3%82%8A%20%E7%9F%A5%E8%82%B2%20%E3%82%AB%E3%83%BC%E3%83%89"
-        },
-        {
-          "name": "折り紙メダル (20個セット)",
-          "reason": "幼稚園・保育園のご褒美イベント用。",
-          "background": "一個作るのに数分かかるものを、数十個単位で揃えたい需要。",
-          "source": "折り紙・リボン",
-          "price": "800円〜1,200円",
-          "kind_word": "運動会や誕生会のプレゼントに。首掛け用のリボン付きです。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E6%8A%98%E3%82%8A%E7%B4%99%20%E3%83%A1%E3%83%80%E3%83%AB"
+          "name": "LV アマゾン (ショルダーバッグ)",
+          "reason": "レトロ回帰ブーム。スマホ収納に最適なサイズ感。",
+          "background": "廃盤品だが、現在のファッションスタイルに驚くほどマッチするため需要絶大。",
+          "source": "総合リサイクルショップ",
+          "price_gap": "店舗 3.0万円 → メルカリ 5.0万円",
+          "kind_word": "斜めがけシルエットが非常に可愛いバッグです。内ポケットのベタつきも無く、実用品としてすぐにお使いいただけます。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3%20%E3%82%A2%E3%83%9E%E3%82%BE%E3%83%B3"
         }
       ]
     },
     {
-      "id": "discontinued",
-      "title": "廃盤品 (Discontinued Items)",
+      "id": "gaming",
+      "title": "娯楽・ゲーム (Gaming Premium)",
       "items": [
         {
-          "name": "パイロット オートマック",
-          "reason": "自動芯出し機構の傑作。廃盤後のコレクター需要。",
-          "background": "実用性と希少性の両立。SNSで「神シャーペン」として再加熱。",
-          "source": "文具店在庫等",
-          "price": "15,000円〜25,000円",
-          "kind_word": "動作確認済み。廃盤後も根強い人気を誇る至高の1本です。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%91%E3%82%A4%E3%83%AD%E3%83%83%E3%83%88%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%83%E3%82%AF"
+          "name": "PS5 Pro (30周年記念モデル)",
+          "reason": "世界12,300台限定。希少性による圧倒的な価格高騰。",
+          "background": "初期抽選のみで完売。コレクターによるプレミアム化。",
+          "source": "当選品/予約完売",
+          "price_gap": "定価 16万円 → メルカリ 25万円+",
+          "kind_word": "記念すべき限定仕様のPS5 Proです。コレクション用として、厳重な梱包で発送いたします。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=PS5%20Pro%2030th%20Anniversary"
         },
         {
-          "name": "ユニクロ 汗取りキャミソール",
-          "reason": "2024年以降未販売。旧型の「しっかりした綿」素材への支持。",
-          "background": "現行品が肌に合わない、または旧型の形状を好む層の必死な探し物。",
-          "source": "個人ストック・リサイクル",
-          "price": "1,500円〜2,500円",
-          "kind_word": "今や入手困難な旧型。これでないと安心できない方に。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%A6%E3%83%8B%E3%82%AF%E3%83%AD%20%E6%B1%97%E5%8F%96%E3%82%8A%E3%82%AD%E3%83%A3%E3%83%9F%E3%82%BD%E3%83%BC%E3%83%AB"
+          "name": "Newニンテンドー3DS LL (SF版)",
+          "reason": "海外コレクターからの逆輸入需要。デザインの完成度。",
+          "background": "受注生産終了後、レトロゲーム機としての価値が再定義されている。",
+          "source": "中古ゲームショップ/ハードオフ",
+          "price_gap": "店舗 1.8万円 → メルカリ 3.8万円",
+          "kind_word": "スーパーファミコン世代にはたまらないデザインです。画面も保護フィルム貼り付け済みで、非常に綺麗な状態です。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=New%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BC3DS%20LL%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%95%E3%82%A1%E3%83%9F%E3%82%B3%E3%83%B3"
         },
         {
-          "name": "エクセル SI04",
-          "reason": "人気アイシャドウの特定色番。代替品が見当たらない絶妙な色味。",
-          "background": "コスメの「神色」廃盤は、ファンにとって死活問題。ストック需要。",
-          "source": "ドラッグストア在庫等",
-          "price": "1,800円〜3,000円",
-          "kind_word": "ストックしていた分をお譲りします。愛用されていた方にぜひ。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%20SI04"
+          "name": "GBA SP 高輝度(AGS-101)",
+          "reason": "レトロゲームを最高画質で遊びたい層のバイブル。",
+          "background": "国内通常モデルより格段に明るい海外一部モデル等の希少価値。",
+          "source": "個人売買/海外輸入品/ハードオフ",
+          "price_gap": "店舗 1.2万円 → メルカリ 2.5万円",
+          "kind_word": "当時の常識を覆す明るい液晶で、ゲームがより鮮やかに楽しめます。動作も快調です。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=GBA%20SP%20backlit"
         }
       ]
     },
     {
       "id": "arbitrage",
-      "title": "価格差リサーチ (Price Arbitrage)",
+      "title": "価格差・高騰品 (Arbitrage)",
       "items": [
         {
-          "name": "メーカー純正TVリモコン",
-          "reason": "部品共有の終了。互換品より純正を好む層。",
-          "background": "中古屋のワゴンセール(300円)から、メルカリでの「型番検索」需要へ。",
-          "source": "ハードオフ等",
-          "price_gap": "店舗 300円 → メルカリ 2,000円",
-          "kind_word": "電池室の液漏れなし。主要ボタン動作確認済みです。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=%E7%B4%94%E6%AD%A3%20%E3%83%86%E3%83%AC%E3%83%93%20%E3%83%AA%E3%83%A2%E3%82%B3%E3%83%B3"
+          "name": "ちいかわ 激レアぬいぐるみ",
+          "reason": "販売開始直後の完売。指名買い需要の爆発。",
+          "background": "「そこでしか買えない」限定品。SNSでの話題性が価格を牽引。",
+          "source": "ちいかわらんど/公式通販",
+          "price_gap": "定価 3,800円 → メルカリ 10,000円",
+          "kind_word": "大切にしてくださるちいかわファンの方にお譲りしたいです。タグ付き・公式ショップ袋も同梱します。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F%20%E3%81%AC%E3%81%84%E3%81%90%E3%82%8B%E3%81%BF%20%E9%99%90%E5%AE%9A"
         },
         {
-          "name": "GBA SP 高輝度モデル",
-          "reason": "世界的なレトロゲーム・改造需要。",
-          "background": "店舗では「古いゲーム機」扱いだが、通の間では高価なIPS液晶相当の価値。",
-          "source": "ハードオフ/2ndStreet",
-          "price_gap": "店舗 3,000円 → メルカリ 20,000円",
-          "kind_word": "バックライト搭載で画面が明るく、非常に遊びやすいです。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=GBA%20SP%20%E6%9C%AC%E4%BD%93"
+          "name": "ポケモンカード 拡張パック",
+          "reason": "封入率の低い特定レアカードへの期待値。",
+          "background": "絶版・品薄による未開封ボックスへの投資需要。",
+          "source": "コンビニ/百貨店/カードショップ",
+          "price_gap": "定価 5,000円 → メルカリ 15,000円+",
+          "kind_word": "シュリンク付き未開封品です。サーチ等一切しておりませんので、運試しにどうぞ。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%20%E6%9C%AA%E9%96%8B%E5%B0%81%20BOX"
         },
         {
-          "name": "iPod Classic (160GB)",
-          "reason": "物理ホイールの操作感と、大容量ストレージ改造需要。",
-          "background": "店舗ではバッテリー死亡のジャンク品が、修理・改造派にとっては宝の山。",
-          "source": "リユースショップ",
-          "price_gap": "店舗 2,000円 → メルカリ 15,000円",
-          "kind_word": "音楽鑑賞専用機として、今なお愛され続ける名機です。",
-          "mercari_url": "https://jp.mercari.com/search?keyword=iPod%20Classic%20160GB"
+          "name": "ノースフェイス バルトロライト",
+          "reason": "冬季の圧倒的指名買い。サイズ感・色味による差異。",
+          "background": "夏場の安価な時期に仕入れ、冬のピークに放出するバイヤー定番品。",
+          "source": "リサイクルショップ（夏場）",
+          "price_gap": "店舗 3.5万円 → メルカリ 6.5万円",
+          "kind_word": "真冬でもこれ一枚で過ごせる温かさです。クリーニング済みで、ふっくら感も維持されています。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20%E3%83%90%E3%83%AB%E3%83%88%E3%83%AD%E3%83%A9%E3%82%A4%E3%83%88%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88"
         }
       ]
     }

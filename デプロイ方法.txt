@@ -1,0 +1,5 @@
+cd C:\Users\kikur\Documents\Antigravity\mercarry-pro
+
+npm run dev
+
+http://localhost:3002
