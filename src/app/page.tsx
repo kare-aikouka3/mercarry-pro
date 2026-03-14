@@ -93,8 +93,8 @@ export default function Home() {
       <header className="pt-10 pb-6 px-6 glass-card border-b border-gray-100 sticky top-0 z-30">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
-            <TrendingUp className="w-6 h-6 text-gold" />
-            <h1 className="text-2xl font-bold gradient-text">Mercari Pro</h1>
+            <img src="/images/logo.png" alt="Mercari Pro Logo" className="w-8 h-8 rounded-full" />
+            <h1 className="text-2xl font-black gradient-text tracking-tighter">Mercari Pro</h1>
           </div>
           <button
             onClick={startResearch}
