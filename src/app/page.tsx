@@ -90,11 +90,14 @@ export default function Home() {
   return (
     <main className="max-w-md mx-auto min-h-screen p-0 pb-24 bg-white">
       {/* Header */}
-      <header className="pt-10 pb-6 px-6 glass-card border-b border-gray-100 sticky top-0 z-30">
+      <header className="pt-10 pb-6 px-6 bg-white border-b border-gray-100 sticky top-0 z-30">
         <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-2">
-            <img src="/images/logo.png" alt="Mercari Pro Logo" className="w-8 h-8 rounded-full" />
-            <h1 className="text-2xl font-black gradient-text tracking-tighter">Mercari Pro</h1>
+          <div className="flex items-end gap-2">
+            <img src="/images/logo.png" alt="Mercari Pro Logo" className="w-8 h-8 rounded-full mb-1" />
+            <div className="relative">
+              <h1 className="text-2xl font-black gradient-text tracking-tighter">Mercari Pro</h1>
+              <span className="absolute -right-1 -bottom-3 text-[10px] font-bold text-gray-300">Ver.1.02</span>
+            </div>
           </div>
           <button
             onClick={startResearch}
@@ -148,8 +151,8 @@ export default function Home() {
               onClick={() => setActiveTab(cat.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap text-xs font-semibold transition-all border ${
                 activeTab === cat.id 
-                  ? "bg-gold text-white border-gold shadow-sm" 
-                  : "bg-gray-50 text-gray-500 border-gray-200"
+                  ? "bg-slate-900 text-white border-slate-900 shadow-lg shadow-slate-200" 
+                  : "bg-gray-50 text-gray-500 border-gray-200 hover:border-gray-300"
               }`}
             >
               {getIcon(cat.id, "w-3 h-3")}
