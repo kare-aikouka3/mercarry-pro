@@ -1,0 +1,172 @@
+{
+  "categories": [
+    {
+      "id": "natural",
+      "title": "自然素材 (Natural Materials)",
+      "items": [
+        {
+          "name": "シーグラス 大量セット",
+          "reason": "マリンインテリアやアロマ台としての需要増。",
+          "background": "DIYブームでのハンドメイド素材需要。洗浄済みの手間が価値。",
+          "source": "海岸",
+          "price": "1,500円〜2,500円",
+          "kind_word": "丁寧に塩抜き・洗浄済みですので、すぐにお使い頂けます。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%82%B7%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%B9%20%E5%A4%A7%E9%87%8F"
+        },
+        {
+          "name": "流木（アク抜き済）",
+          "reason": "アクアリウムやパルダリウム愛好家の増加。",
+          "background": "家庭でのアク抜きは手間と時間がかかるため、処理済みが好まれる。",
+          "source": "海岸・河川敷",
+          "price": "2,000円〜4,000円",
+          "kind_word": "沈水確認済み。煮沸消毒も終えておりますので生体にも安心です。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E6%B5%81%E6%9C%A8%20%E3%82%A2%E3%82%AF%E6%8A%9C%E3%81%8D%E6%B8%88"
+        },
+        {
+          "name": "シダーローズ",
+          "reason": "ナチュラルリースの花材として不動の人気。",
+          "background": "バラのような形状の松ぼっくり。選別の手間が価値。",
+          "source": "公園・森林（ヒマラヤスギ）",
+          "price": "1,200円〜2,000円",
+          "kind_word": "形が綺麗なものを選別しました。梱包も潰れないよう配慮します。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%82%B7%E3%83%80%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%BA"
+        },
+        {
+          "name": "どんぐり（煮沸済）",
+          "reason": "保育園・学校の工作用。虫対策済みが必須条件。",
+          "background": "「虫が出ない」安心感に親御さんはお金を払います。",
+          "source": "公園",
+          "price": "800円〜1,500円",
+          "kind_word": "煮沸・乾燥済みです。お子様の工作に安心してお使いいただけます。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%81%A9%E3%82%93%E3%81%90%E3%82%8A%20%E7%85%AE%E6%B2%B8%E6%B8%88"
+        },
+        {
+          "name": "シー陶器 セット",
+          "reason": "アップサイクルアクセサリや金継ぎ練習用。",
+          "background": "陶磁器の破片が波で削られたもの。一点物としての価値。",
+          "source": "海岸",
+          "price": "1,200円〜2,000円",
+          "kind_word": "波に揉まれた角の丸いものだけを集めた、優しい風合いのセットです。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%82%B7%E3%83%BC%E9%99%B6%E5%99%A8"
+        }
+      ]
+    },
+    {
+      "id": "craft",
+      "title": "工作代行 (Craft Substitution)",
+      "items": [
+        {
+          "name": "壁面飾り：卒園・入園",
+          "reason": "3-4月の多忙な保育士・介護職の需要がピーク。",
+          "background": "年度末の事務作業増により、装飾まで手が回らない現場の救い。",
+          "source": "画用紙・文具",
+          "price": "1,500円〜2,500円",
+          "kind_word": "画用紙で一つ一つ丁寧に作成。忙しい先生方の時短にお役立て下さい。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E5%A3%81%E9%9D%A2%E9%A3%BE%E3%82%8A%20%E5%8D%92%E5%9C%92%20%E5%85%A5%E5%9C%92"
+        },
+        {
+          "name": "モンテッソーリ 洗濯バサミ遊び",
+          "reason": "家庭での「おうちモンテ」教育の普及。",
+          "background": "指先の知育玩具を自作する時間がない親御さん向け。",
+          "source": "ラミネート・洗濯バサミ",
+          "price": "1,000円〜1,800円",
+          "kind_word": "指先の訓練に最適。可愛い動物の絵柄で楽しく集中して遊べます。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%A2%E3%83%B3%E3%83%86%E3%83%83%E3%82%BD%E3%83%BC%E3%83%AA%20%E6%B4%97%E6%BF%AF%E3%83%90%E3%82%B5%E3%83%9F"
+        },
+        {
+          "name": "入園準備 レッスンバッグ",
+          "reason": "「手作り指定」があるが、裁縫ができない親御さん。",
+          "background": "ミシンを持っていない家庭も多く、既製品より「手作り感」が重宝。",
+          "source": "キルティング生地等",
+          "price": "2,000円〜4,000円",
+          "kind_word": "図書袋としても使える標準サイズ。内側は丈夫なキルティングです。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%83%90%E3%83%83%E3%82%B0%20%E3%83%8F%E3%83%B3%E3%83%89%E3%83%A1%E3%82%A4%E3%83%89"
+        },
+        {
+          "name": "手作り 知育カード",
+          "reason": "良質な学習教材を安価に揃えたい需要。",
+          "background": "フラッシュカードや絵合わせ。ラミネート加工の手間が価値。",
+          "source": "印刷物・ラミネート",
+          "price": "800円〜1,500円",
+          "kind_word": "角丸加工済みなので、小さなお子様が触れても安心・安全です。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E6%89%8B%EBD%9C%E3%82%8A%20%E7%9F%A5%E8%82%B2%20%E3%82%AB%E3%83%BC%E3%83%89"
+        },
+        {
+          "name": "折り紙メダル (20個セット)",
+          "reason": "幼稚園・保育園のご褒美イベント用。",
+          "background": "一個作るのに数分かかるものを、数十個単位で揃えたい需要。",
+          "source": "折り紙・リボン",
+          "price": "800円〜1,200円",
+          "kind_word": "運動会や誕生会のプレゼントに。首掛け用のリボン付きです。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E6%8A%98%E3%82%8A%E7%B4%99%20%E3%83%A1%E3%83%80%E3%83%AB"
+        }
+      ]
+    },
+    {
+      "id": "discontinued",
+      "title": "廃盤品 (Discontinued Items)",
+      "items": [
+        {
+          "name": "パイロット オートマック",
+          "reason": "自動芯出し機構の傑作。廃盤後のコレクター需要。",
+          "background": "実用性と希少性の両立。SNSで「神シャーペン」として再加熱。",
+          "source": "文具店在庫等",
+          "price": "15,000円〜25,000円",
+          "kind_word": "動作確認済み。廃盤後も根強い人気を誇る至高の1本です。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%91%E3%82%A4%E3%83%AD%E3%83%83%E3%83%88%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%83%E3%82%AF"
+        },
+        {
+          "name": "ユニクロ 汗取りキャミソール",
+          "reason": "2024年以降未販売。旧型の「しっかりした綿」素材への支持。",
+          "background": "現行品が肌に合わない、または旧型の形状を好む層の必死な探し物。",
+          "source": "個人ストック・リサイクル",
+          "price": "1,500円〜2,500円",
+          "kind_word": "今や入手困難な旧型。これでないと安心できない方に。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%83%A6%E3%83%8B%E3%82%AF%E3%83%AD%20%E6%B1%97%E5%8F%96%E3%82%8A%E3%82%AD%E3%83%A3%E3%83%9F%E3%82%BD%E3%83%BC%E3%83%AB"
+        },
+        {
+          "name": "エクセル SI04",
+          "reason": "人気アイシャドウの特定色番。代替品が見当たらない絶妙な色味。",
+          "background": "コスメの「神色」廃盤は、ファンにとって死活問題。ストック需要。",
+          "source": "ドラッグストア在庫等",
+          "price": "1,800円〜3,000円",
+          "kind_word": "ストックしていた分をお譲りします。愛用されていた方にぜひ。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB%20%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8B%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%20SI04"
+        }
+      ]
+    },
+    {
+      "id": "arbitrage",
+      "title": "価格差リサーチ (Price Arbitrage)",
+      "items": [
+        {
+          "name": "メーカー純正TVリモコン",
+          "reason": "部品共有の終了。互換品より純正を好む層。",
+          "background": "中古屋のワゴンセール(300円)から、メルカリでの「型番検索」需要へ。",
+          "source": "ハードオフ等",
+          "price_gap": "店舗 300円 → メルカリ 2,000円",
+          "kind_word": "電池室の液漏れなし。主要ボタン動作確認済みです。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=%E7%B4%94%E6%AD%A3%20%E3%83%86%E3%83%AC%E3%83%93%20%E3%83%AA%E3%83%A2%E3%82%B3%E3%83%B3"
+        },
+        {
+          "name": "GBA SP 高輝度モデル",
+          "reason": "世界的なレトロゲーム・改造需要。",
+          "background": "店舗では「古いゲーム機」扱いだが、通の間では高価なIPS液晶相当の価値。",
+          "source": "ハードオフ/2ndStreet",
+          "price_gap": "店舗 3,000円 → メルカリ 20,000円",
+          "kind_word": "バックライト搭載で画面が明るく、非常に遊びやすいです。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=GBA%20SP%20%E6%9C%AC%E4%BD%93"
+        },
+        {
+          "name": "iPod Classic (160GB)",
+          "reason": "物理ホイールの操作感と、大容量ストレージ改造需要。",
+          "background": "店舗ではバッテリー死亡のジャンク品が、修理・改造派にとっては宝の山。",
+          "source": "リユースショップ",
+          "price_gap": "店舗 2,000円 → メルカリ 15,000円",
+          "kind_word": "音楽鑑賞専用機として、今なお愛され続ける名機です。",
+          "mercari_url": "https://jp.mercari.com/search?keyword=iPod%20Classic%20160GB"
+        }
+      ]
+    }
+  ]
+}
