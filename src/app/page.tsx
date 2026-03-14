@@ -85,7 +85,7 @@ export default function Home() {
     }
   };
 
-  const activeCategory = data?.categories.find(c => c.id === activeTab);
+  const activeCategory = data?.categories?.find(c => c.id === activeTab);
 
   return (
     <main className="max-w-md mx-auto min-h-screen p-0 pb-24 bg-white">
@@ -142,7 +142,7 @@ export default function Home() {
 
         {/* Tabs */}
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2">
-          {data?.categories.map((cat) => (
+          {data?.categories?.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
