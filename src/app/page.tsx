@@ -43,6 +43,8 @@ export default function Home() {
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [activeTab, setActiveTab] = useState<string>("natural");
   const [searchQuery, setSearchQuery] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [dataVersion, setDataVersion] = useState(0);
 
   useEffect(() => {
     fetch("/api/research")
@@ -61,16 +63,40 @@ export default function Home() {
     setIsResearching(true);
     setResearchProgress(0);
     setSelectedItem(null);
-    
-    for (let i = 0; i <= 100; i += 10) {
-      setResearchProgress(i);
-      await new Promise((r) => setTimeout(r, 150 + Math.random() * 200));
-    }
+    setShowSuccess(false);
 
-    const res = await fetch("/api/research", { method: "POST" });
-    const json = await res.json();
-    setData(json);
-    setIsResearching(false);
+    // Run progress animation and API fetch in parallel
+    const fetchPromise = fetch("/api/research", { method: "POST" }).then((res) => res.json());
+
+    // Animate progress to 80% while waiting for API
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+      progress += Math.random() * 12 + 3;
+      if (progress > 80) progress = 80;
+      setResearchProgress(Math.round(progress));
+    }, 200);
+
+    try {
+      const json = await fetchPromise;
+      clearInterval(progressInterval);
+
+      // Animate from current to 100%
+      setResearchProgress(90);
+      await new Promise((r) => setTimeout(r, 150));
+      setResearchProgress(100);
+      await new Promise((r) => setTimeout(r, 300));
+
+      setData(json);
+      setDataVersion((v) => v + 1);
+      setIsResearching(false);
+
+      // Show success toast
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 2000);
+    } catch {
+      clearInterval(progressInterval);
+      setIsResearching(false);
+    }
   };
 
   const getIcon = (id: string, className = "w-5 h-5") => {
@@ -199,7 +225,7 @@ export default function Home() {
         <div className="space-y-3">
           {activeCategory?.items.map((item, idx) => (
             <motion.button
-              key={idx}
+              key={`${item.name}-${dataVersion}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.05 }}
@@ -309,6 +335,21 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Success Toast */}
+      <AnimatePresence>
+        {showSuccess && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+            className="fixed bottom-28 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-2 text-sm font-semibold"
+          >
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            リストを更新しました
           </motion.div>
         )}
       </AnimatePresence>
