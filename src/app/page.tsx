@@ -12,7 +12,6 @@ import {
   Search,
   CheckCircle2,
   Clock,
-  ExternalLink,
   ChevronRight,
   X,
   ExternalLink as LinkIcon
@@ -44,6 +43,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<string>("natural");
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
+  const [researchError, setResearchError] = useState("");
   const [dataVersion, setDataVersion] = useState(0);
 
   useEffect(() => {
@@ -52,21 +52,21 @@ export default function Home() {
       .then((json) => setData(json));
   }, []);
 
-  const handleCustomSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!searchQuery.trim()) return;
-    const url = `https://jp.mercari.com/search?keyword=${encodeURIComponent(searchQuery)}&shipping_from_area_id=1`;
-    window.open(url, "_blank");
-  };
-
   const startResearch = async () => {
     setIsResearching(true);
     setResearchProgress(0);
     setSelectedItem(null);
     setShowSuccess(false);
+    setResearchError("");
 
-    // Run progress animation and API fetch in parallel
-    const fetchPromise = fetch("/api/research", { method: "POST" }).then((res) => res.json());
+    const fetchPromise = fetch("/api/research", { method: "POST" }).then(async (res) => {
+      const json = await res.json();
+      if (!res.ok) {
+        throw new Error(json.error || "AIリサーチに失敗しました");
+      }
+
+      return json;
+    });
 
     // Animate progress to 80% while waiting for API
     let progress = 0;
@@ -93,9 +93,10 @@ export default function Home() {
       // Show success toast
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 2000);
-    } catch {
+    } catch (error) {
       clearInterval(progressInterval);
       setIsResearching(false);
+      setResearchError(error instanceof Error ? error.message : "AIリサーチに失敗しました");
     }
   };
 
@@ -198,7 +199,7 @@ export default function Home() {
             className="px-6 py-4 bg-gold/5 border-b border-gold/10 overflow-hidden"
           >
             <div className="flex justify-between items-center mb-2 text-xs text-gold font-bold">
-              <span>市場動向を分析中...</span>
+              <span>AIリサーチで市場動向を分析中...</span>
               <span>{researchProgress}%</span>
             </div>
             <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
@@ -208,6 +209,20 @@ export default function Home() {
                 animate={{ width: `${researchProgress}%` }}
               />
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Error Toast */}
+      <AnimatePresence>
+        {researchError && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+            className="fixed bottom-28 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-sm bg-red-50 text-red-700 px-5 py-3 rounded-2xl shadow-xl border border-red-100 text-xs font-semibold leading-relaxed"
+          >
+            {researchError}
           </motion.div>
         )}
       </AnimatePresence>
@@ -329,7 +344,7 @@ export default function Home() {
                   <div className="bg-white/5 p-5 rounded-2xl border border-dashed border-gold/30">
                     <div className="text-[10px] uppercase tracking-widest text-gold/60 mb-2 font-black">親切な一言（コピペ推奨）</div>
                     <p className="text-slate-400 italic text-sm leading-relaxed">
-                      "{selectedItem.kind_word}"
+                      {selectedItem.kind_word}
                     </p>
                   </div>
                 </div>
@@ -349,7 +364,7 @@ export default function Home() {
             className="fixed bottom-28 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-2 text-sm font-semibold"
           >
             <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            リストを更新しました
+            AIリサーチ結果を更新しました
           </motion.div>
         )}
       </AnimatePresence>
