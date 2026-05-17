@@ -113,8 +113,7 @@ function extractOutputText(response: unknown): string {
 }
 
 function parseResearchData(outputText: string): ResearchData {
-  const cleaned = outputText.replace(/^```json\s*/i, "").replace(/```$/i, "").trim();
-  const raw = JSON.parse(cleaned) as unknown;
+  const raw = parseJsonLike(outputText);
   const parsed = normalizeResearchData(raw);
 
   if (!Array.isArray(parsed.categories) || parsed.categories.length === 0) {
@@ -136,6 +135,58 @@ function parseResearchData(outputText: string): ResearchData {
     }));
 
   return parsed;
+}
+
+function parseJsonLike(outputText: string): unknown {
+  const cleaned = stripJsonWrapper(outputText);
+  const extracted = extractJsonPayload(cleaned);
+  const candidates = [
+    cleaned,
+    removeTrailingCommas(cleaned),
+    extracted,
+    removeTrailingCommas(extracted),
+  ].filter((candidate, index, array) => candidate && array.indexOf(candidate) === index);
+
+  let lastError: unknown;
+
+  for (const candidate of candidates) {
+    try {
+      return JSON.parse(candidate);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error("Failed to parse Gemini JSON response.");
+}
+
+function stripJsonWrapper(text: string) {
+  return text
+    .trim()
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/```\s*$/i, "")
+    .trim();
+}
+
+function extractJsonPayload(text: string) {
+  const firstObject = text.indexOf("{");
+  const lastObject = text.lastIndexOf("}");
+  const firstArray = text.indexOf("[");
+  const lastArray = text.lastIndexOf("]");
+
+  if (firstObject !== -1 && lastObject > firstObject) {
+    return text.slice(firstObject, lastObject + 1);
+  }
+
+  if (firstArray !== -1 && lastArray > firstArray) {
+    return text.slice(firstArray, lastArray + 1);
+  }
+
+  return text;
+}
+
+function removeTrailingCommas(text: string) {
+  return text.replace(/,\s*(?=[}\]])/g, "");
 }
 
 function normalizeResearchData(raw: unknown): ResearchData {
