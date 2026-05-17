@@ -110,6 +110,35 @@ function extractOutputText(response: unknown): string {
     return response.output_text;
   }
 
+  if (typeof response === "object" && response !== null && "candidates" in response) {
+    const candidates = response.candidates;
+    if (!Array.isArray(candidates)) return "";
+
+    return candidates
+      .flatMap((candidate) => {
+        if (typeof candidate !== "object" || candidate === null || !("content" in candidate)) {
+          return [];
+        }
+
+        const content = candidate.content;
+        if (typeof content !== "object" || content === null || !("parts" in content)) {
+          return [];
+        }
+
+        const parts = content.parts;
+        if (!Array.isArray(parts)) return [];
+
+        return parts.flatMap((part) => {
+          if (typeof part !== "object" || part === null || !("text" in part)) {
+            return [];
+          }
+
+          return typeof part.text === "string" ? [part.text] : [];
+        });
+      })
+      .join("\n");
+  }
+
   if (typeof response !== "object" || response === null || !("output" in response)) {
     return "";
   }
@@ -198,42 +227,41 @@ ${existingNames}
 }
 
 async function generateResearchData(existingData: ResearchData): Promise<ResearchData> {
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) {
-    throw new Error("OPENAI_API_KEY is not configured.");
+    throw new Error("GEMINI_API_KEY is not configured.");
   }
 
-  const model = process.env.OPENAI_MODEL || "gpt-5.4-mini";
-  const response = await fetch("https://api.openai.com/v1/responses", {
+  const model = process.env.GEMINI_MODEL || "gemini-2.5-flash-lite";
+  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${apiKey}`,
+      "x-goog-api-key": apiKey,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model,
-      input: [
-        {
-          role: "system",
-          content:
-            "You return practical Japanese resale research as strict JSON. Use web search when available, but do not invent exact sales counts.",
-        },
+      contents: [
         {
           role: "user",
-          content: buildResearchPrompt(existingData),
+          parts: [
+            {
+              text: [
+                "あなたは実用的な日本語のメルカリ商材リサーチ結果を、指定スキーマに合う厳密なJSONだけで返します。",
+                "Google検索を使える場合は最近性の確認に使ってください。ただし、確認できない販売件数や売り切れ件数を断定してはいけません。",
+                buildResearchPrompt(existingData),
+              ].join("\n\n"),
+            },
+          ],
         },
       ],
-      tools: [{ type: "web_search_preview" }],
-      reasoning: { effort: "low" },
-      max_output_tokens: 9000,
-      text: {
-        format: {
-          type: "json_schema",
-          name: "mercari_research_result",
-          strict: true,
-          schema: researchSchema,
-        },
+      tools: [{ google_search: {} }],
+      generationConfig: {
+        responseMimeType: "application/json",
+        responseJsonSchema: researchSchema,
+        temperature: 0.9,
+        topP: 0.95,
+        maxOutputTokens: 9000,
       },
     }),
   });
@@ -244,13 +272,13 @@ async function generateResearchData(existingData: ResearchData): Promise<Researc
     const errorMessage =
       typeof responseJson?.error?.message === "string"
         ? responseJson.error.message
-        : "OpenAI research request failed.";
+        : "Gemini research request failed.";
     throw new Error(errorMessage);
   }
 
   const outputText = extractOutputText(responseJson);
   if (!outputText) {
-    throw new Error("OpenAI response did not include output text.");
+    throw new Error("Gemini response did not include output text.");
   }
 
   return parseResearchData(outputText);
@@ -277,7 +305,7 @@ export async function POST() {
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Failed to refresh data";
-    console.error("AI research failed:", error);
+    console.error("Gemini research failed:", error);
 
     return NextResponse.json({ error: message }, { status: 500 });
   }
